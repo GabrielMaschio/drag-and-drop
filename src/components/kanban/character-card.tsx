@@ -6,7 +6,7 @@ interface Props {
 
 export const CharacterCard = ({ character }: Props) => {
 	return (
-		<div className="flex items-center gap-4 bg-gray-800 text-white p-3 rounded-lg shadow-md">
+		<div className="flex items-center gap-4 bg-black/25 text-white p-3 rounded-lg shadow-md">
 			<img
 				src={character.image}
 				alt={character.name}

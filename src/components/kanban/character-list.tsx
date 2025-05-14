@@ -13,7 +13,7 @@ export const CharacterList = ({
 				<div
 					{...provided.droppableProps}
 					ref={provided.innerRef}
-					className="bg-white/5 rounded-xl p-4 border border-white/10 min-h-[400px] max-h-[600px] overflow-y-auto custom-scrollbar"
+					className="bg-white/5 rounded-[8px] p-4 border border-white/10 min-h-[400px] max-h-[600px] overflow-y-auto custom-scrollbar"
 				>
 					<h2 className="text-lg font-semibold mb-4 text-center">{title}</h2>
 

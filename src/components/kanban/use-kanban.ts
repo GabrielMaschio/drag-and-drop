@@ -35,6 +35,14 @@ export const useCharactersKanban = () => {
 		)
 			return;
 
+		if (
+			(destination.droppableId === "main" &&
+				columns["main" as keyof typeof newColumns].length > 4) ||
+			(destination.droppableId === "reserves" &&
+				columns["reserves" as keyof typeof newColumns].length > 4)
+		)
+			return;
+
 		const newColumns = { ...columns };
 
 		if (source.droppableId === destination.droppableId) {

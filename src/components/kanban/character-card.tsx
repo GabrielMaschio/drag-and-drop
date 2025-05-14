@@ -1,3 +1,4 @@
+import { twMerge } from "tailwind-merge";
 import type { Characters } from "./types";
 
 interface Props {
@@ -14,8 +15,21 @@ export const CharacterCard = ({ character }: Props) => {
 			/>
 			<div>
 				<h3 className="font-semibold">{character.name}</h3>
-				<p className="text-sm text-gray-400">{character.species}</p>
-				<p className="text-xs text-green-400">{character.status}</p>
+				<p className="text-xs text-gray-400">
+					<span
+						className={twMerge(
+							"text-xs",
+							character.status === "Alive"
+								? "text-green-400"
+								: character.status === "Dead"
+									? "text-red-400"
+									: "text-gray-400",
+						)}
+					>
+						{character.status}
+					</span>{" "}
+					- {character.species}
+				</p>
 			</div>
 		</div>
 	);
